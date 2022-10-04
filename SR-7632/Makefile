@@ -1,0 +1,2 @@
+all:
+	swiftc bla.swift
