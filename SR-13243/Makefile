@@ -5,4 +5,4 @@ edit:
 	vi test.swift
 c: clean
 clean:
-	rm -f Matrix
+	rm -f test

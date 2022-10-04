@@ -9,7 +9,7 @@ public struct B<C: A> {
                 d = C()
         }
 
-        func j() {
+        func j() -> Int {
                 var h = 0
                 var i = 0
 
@@ -24,6 +24,8 @@ public struct B<C: A> {
                 }
 
                 g()
+
+                return h + i
         }
 
         var d: C 
