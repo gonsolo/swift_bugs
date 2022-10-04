@@ -49,7 +49,7 @@ time_tuple: tuple.swift
 .PHONY: c clean e edit r report p perf
 c: clean
 clean:
-	rm -f bug.cc bug.py bug.swift bug bug.o tuple
+	rm -f bug.cc bug.py bug.swift bug bug.o tuple perf.data perf.data.old
 e: edit
 edit:
 	vi Makefile
