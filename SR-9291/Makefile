@@ -7,7 +7,6 @@ SHELL:=/bin/bash
 
 #CONFIGURATION=-O
 
-#SWIFTC=/home/gonsolo/src/apple/build/buildbot_linux/swift-linux-x86_64/bin/swiftc
 SWIFTC=swiftc
 
 all: size time_swift #time_cpp time_python
