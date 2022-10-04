@@ -3,23 +3,26 @@ SHELL:=/bin/bash
 
 CONFIGURATION=-O
 
-#SWIFTC=/home/gonsolo/src/apple/build/buildbot_linux/swift-linux-x86_64/bin/swiftc
 SWIFTC=swiftc
 
 all: size time_swift time_cpp time_python
 
 size:
 	@echo "Size: $(SIZE)"
+	@echo ""
 
 time_swift: bug.swift
 	@echo "Swift:"
-	@#time $(SWIFTC) -v -driver-show-incremental $(CONFIGURATION) bug.swift
 	@time $(SWIFTC) $(CONFIGURATION) bug.swift
+	@echo ""
 
 time_cpp: bug.cc
-	@echo "C++:"
+	@echo "C++ (GCC):"
 	@time g++ -c -O3 bug.cc
+	@echo ""
+	@echo "C++ (Clang):"
 	@time clang++ -c -O3 bug.cc
+	@echo ""
 
 time_python: bug.py
 	@echo "Python:"
@@ -40,11 +43,13 @@ bug.py: Makefile
 	@LANG=C printf '0x%x, ' $$(seq $(SIZE)) >> $@
 	@echo "]" >> $@
 
+time_tuple: tuple.swift
+	@time $(SWIFTC) $(CONFIGURATION) tuple.swift
 
 .PHONY: c clean e edit r report p perf
 c: clean
 clean:
-	rm -f bug.swift
+	rm -f bug.cc bug.py bug.swift bug bug.o tuple
 e: edit
 edit:
 	vi Makefile

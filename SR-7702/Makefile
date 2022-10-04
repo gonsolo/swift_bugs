@@ -12,7 +12,7 @@ bug.swift: Makefile
 .PHONY: c clean e edit
 c: clean
 clean:
-	rm -f bug.swift
+	rm -f bug bug.swift perf.data
 e: edit
 edit:
 	vi bug.swift
