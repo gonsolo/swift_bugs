@@ -1,8 +1,6 @@
-# Bug status
+# Swift bugs with large arrays
 
-## Large arrays
-
-### Open
+## Open
 
 * Creating an array with 10.000 elements is slow with optimization
   https://github.com/apple/swift/issues/50243
@@ -19,13 +17,14 @@
   Doesn't crash anymore. Still slow. Open.
   (SR-9291)
 
-### Fixed but still open
+## Fixed but still open
 
-* SILVerifier ist still very slow with large arrays
-  https://github.com/apple/swift/issues/50242
-  Works. Still open. (SR-7702)
+* Internal compiler error in AllocBoxToStack.cpp
+  https://github.com/apple/swift/issues/55683
+  Works. Still open.
+  (SR-13243)
 
-### Closed
+## Closed
 
 * RedundantLoadElimination is slow with a large static array
   https://github.com/apple/swift/issues/51723
@@ -36,16 +35,9 @@
   Fixed in https://github.com/apple/swift/pull/16560
   SR-7632
 
-## Others
-
-### Fixed but still open
-
-* Internal compiler error in AllocBoxToStack.cpp
-  https://github.com/apple/swift/issues/55683
-  Works. Still open.
-  (SR-13243)
-
-### Closed
+* SILVerifier ist still very slow with large arrays
+  https://github.com/apple/swift/issues/50242
+  Works. (SR-7702)
 
 * scanDouble error
   Fixed in https://github.com/apple/swift-corelibs-foundation/pull/2552
