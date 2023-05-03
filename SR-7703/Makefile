@@ -55,6 +55,6 @@ edit:
 	vi Makefile
 p: perf
 perf: bug.swift
-	time perf record -e cycles -c 10000 --call-graph=dwarf $(SWIFTC) $(CONFIGURATION) bug.swift
+	time perf record $(SWIFTC) $(CONFIGURATION) bug.swift
 	perf report
 
