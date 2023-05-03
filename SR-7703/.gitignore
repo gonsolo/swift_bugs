@@ -1,3 +1,7 @@
 bug
 bug.o
 tuple
+bug.cc
+bug.py
+bug.swift
+perf.data

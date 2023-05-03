@@ -17,13 +17,6 @@
   Doesn't crash anymore. Still slow. Open.
   (SR-9291)
 
-## Fixed but still open
-
-* Internal compiler error in AllocBoxToStack.cpp
-  https://github.com/apple/swift/issues/55683
-  Works. Still open.
-  (SR-13243)
-
 ## Closed
 
 * RedundantLoadElimination is slow with a large static array
@@ -46,4 +39,10 @@
 * Scanner get line comments wrong
   Invalid. Closed.
   (SR-11875)
+
+* Internal compiler error in AllocBoxToStack.cpp
+  https://github.com/apple/swift/issues/55683
+  Works.
+  (SR-13243)
+
 

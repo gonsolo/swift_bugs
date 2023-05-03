@@ -1,7 +1,7 @@
 SIZE=15000
 SHELL:=/bin/bash
 
-#CONFIGURATION=-O
+CONFIGURATION=-O
 
 SWIFTC=swiftc
 
