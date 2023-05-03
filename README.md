@@ -12,11 +12,6 @@
   Slow with "-O". Open.
   (SR-9223)
 
-* SIGSEGV with large array in SILGen
-  https://github.com/apple/swift/issues/51762
-  Doesn't crash anymore. Still slow. Open.
-  (SR-9291)
-
 ## Closed
 
 * RedundantLoadElimination is slow with a large static array
@@ -45,4 +40,8 @@
   Works.
   (SR-13243)
 
+* SIGSEGV with large array in SILGen
+  https://github.com/apple/swift/issues/51762
+  Doesn't crash anymore. Still slow.
+  (SR-9291)
 
