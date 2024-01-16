@@ -7,12 +7,12 @@
   Slow. Open.
   (SR-7703)
 
+## Closed
+
 * Inliner exhibits slow compilation time with a large static array 
   https://github.com/apple/swift/issues/51712
-  Slow with "-O". Open.
+  Duplicate of 7703.
   (SR-9223)
-
-## Closed
 
 * RedundantLoadElimination is slow with a large static array
   https://github.com/apple/swift/issues/51723
