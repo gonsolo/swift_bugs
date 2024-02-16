@@ -2,12 +2,14 @@
 
 ## Open
 
+* None
+
+## Closed
+
 * Creating an array with 10.000 elements is slow with optimization
   https://github.com/apple/swift/issues/50243
   Slow. Open.
   (SR-7703)
-
-## Closed
 
 * Inliner exhibits slow compilation time with a large static array 
   https://github.com/apple/swift/issues/51712
